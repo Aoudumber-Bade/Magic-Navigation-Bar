@@ -10,8 +10,9 @@
   <a aria-label="Framework" href="https://nextjs.org">
     <img alt="" src="https://cdn-icons-png.flaticon.com/512/174/174854.png">
   </a>
-  <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Javascript-shield.png
-  ">
+ <a href="">
+  <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Javascript-shield.png">
+ </a>
   <a aria-label="Javascript" href="">
     <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png">
   </a>
