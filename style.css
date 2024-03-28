@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    min-height: 100vh;
+     /* font-family: "MuseoModerno", sans-serif; */
+     font-family: "Poppins", sans-serif;
+    background: url('https://i.pinimg.com/originals/1a/33/b0/1a33b0187fe0d6a6c1a49193517679c0.gif') center / cover;
+
+}
+
+nav {
+    color: #fff;
+    position: fixed;
+    inset: auto 0 0 0;
+    border-bottom: 20px solid #fff;
+    width: min(500px, 100%);
+    --w-h-item:60px;
+    --position-x-active: 170px;
+
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(5,var(--w-h-item));
+    grid-template-rows: var(--w-h-item) ;
+    justify-content: space-between;
+}
+
+nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    transition: .5s;
+    color: #000;
+
+}
+
+nav ul li.active {
+    transform: translateY(-10px);
+}
+nav .effect {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: calc(var(--w-h-item) + 10px);
+    z-index: -1;
+    overflow: hidden;
+}
+
+nav .effect::before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: var(--w-h-item);
+    width: calc(var(--position-x-active) - 10px);
+    background-color: #fff;
+    content: '';
+    border-top-right-radius: 30px;
+    transition: .5s;
+
+}
+
+nav .effect::after {
+     content: '';
+     position: absolute;
+     bottom: 0;
+     right: 0;
+     height: var(--w-h-item);
+     background-color: #fff;
+     width: calc(100% - var(--position-x-active) - var(--w-h-item) - 10px);
+     border-top-left-radius: 30px;
+     transition: .5s;
+
+}
+
+nav .effect .circle {
+    position: absolute;
+    width: var(--w-h-item);
+    height: var(--w-h-item);
+    background-color: #fff;
+    left: var(--position-x-active);
+    border-radius: 50%;
+    box-shadow:  0 20px 20px #5555;
+    transition: 0.5s;
+}
+
+nav .effect .circle::before {
+    position: absolute;
+    left: -10px;
+    right: -10px;
+    content: '';
+    height: 100%;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 0 50px 0 30px #ffff;
+    bottom: -10px;
+    transition: .5s;
+
+}
+
+.content {
+    position: absolute;
+    color: #fff;
+    padding: 30px;
+    /* background-color: red; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    text-transform: uppercase;
+    backdrop-filter: blur(5px);
+}
